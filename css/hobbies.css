@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+:root {
+  --primaryColor: #ffaa22;
+  --secondaryColor: #2c2c2c;
+  --primaryBackground: #f2f2f2;
+  --secondaryBackground: #fdc752;
+  --thirdBackgroundColor: #6e4b00;
+  --thirdColor: #116800;
+  --linkColor: rgb(61, 28, 0);
+  --liSpacing: 2em;
+}
+
+body {
+  background: var(--primaryBackground);
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  background: white;
+  padding: 1em;
+}
+
+.navbar nav {
+  display: none;
+}
+
+.navbar .logo {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--secondaryColor);
+  font-size: 1.7em;
+}
+
+.navbar .logo span {
+  color: var(--primaryColor);
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+}
+
+.navbar .mobileMenu {
+  cursor: pointer;
+  height: auto;
+  width: 25px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--linkColor);
+}
+
+nav.menuBtn {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 9999;
+  width: 66%;
+  right: 0;
+  top: 0;
+  background: var(--secondaryBackground);
+  height: 100vh;
+  padding: 1em;
+}
+
+nav .mobileMenuX {
+  height: auto;
+  width: 25px;
+  float: right;
+  cursor: pointer;
+  margin: .5em;
+}
+
+nav ul.primaryNav {
+  margin-top: 2.5em;
+}
+
+nav li a {
+  color: var(--linkColor);
+  text-decoration: none;
+  display: block;
+  padding: .5em;
+  font-size: 1.5em;
+  text-align: right;
+}
+
+nav li a:hover {
+  background: var(--thirdBackgroundColor);
+  border-radius: 5px;
+  color: var(--primaryBackground);
+}
+
+.mtgSection {
+  padding: 1em;
+  background: var(--secondaryColor);
+  text-align: center;
+}
+
+.mtgSection h1 {
+  color: var(--primaryColor);
+}
+
+.mtgSection h4 {
+  color: var(--primaryBackground);
+}
+
+.mtgSection .mtgCounter {
+  margin: 0;
+}
+
+.mtgSection .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mtgSection .title .mtgSubtitle {
+  margin: 0;
+  color: var(--primaryBackground);
+  margin-bottom: 1em;
+  margin-left: 1.5em;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.mtgSection .title .mtgTitle {
+  margin: 0;
+  margin-top: 1em;
+  font-size: 2em;
+}
+
+.mtgSection .mtgss {
+  height: 900px;
+  width: auto;
+  margin: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 2em;
+}
+
+.mtgSection .mtgDescriptionBigScreen {
+  display: none;
+}
+
+.mtgSection .mtgDescriptionMobile {
+  text-align: left;
+}
+
+.givealotterSection .givealotterContainer {
+  background-color: var(--primaryBackground);
+  height: 1000px;
+}
+
+.plantIrrigatorSection {
+  background: var(--primaryColor);
+  height: 1000px;
+}
+
+@media only screen and (min-width: 1419px) {
+  .mtgSection {
+    padding: 1em;
+    background: var(--secondaryColor);
+  }
+  .mtgSection .title {
+    font-size: 1.5em;
+  }
+  .mtgSection .mtgDescriptionBigScreen {
+    font-size: 1.5em;
+  }
+  .mtgSection .mtgss {
+    height: 900px;
+    width: auto;
+    margin-left: 2em;
+    margin-right: 5em;
+    margin-top: .8em;
+    margin-bottom: .8em;
+  }
+  .mtgSection .mtgText {
+    margin-top: 10em;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  .mobileMenu, .mobileMenuX {
+    display: none;
+  }
+  .navbar.container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 180px auto;
+        grid-template-columns: 180px auto;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  .navbar nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: none;
+    height: auto;
+    position: unset;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar nav a {
+    color: var(--secondaryColor);
+    font-size: 1.5em;
+    padding: .1em 1em;
+  }
+  .navbar nav a:hover {
+    background: none;
+    color: var(--secondaryColor);
+    font-weight: bold;
+  }
+  .navbar nav ul.primaryNav {
+    margin: 0;
+  }
+  .navbar nav li.current a {
+    font-weight: bold;
+  }
+  .mtgSection {
+    padding: 1em;
+    background: var(--secondaryColor);
+    text-align: left;
+  }
+  .mtgSection .mtgCounter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .mtgSection .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .mtgSection .title .mtgSubtitle {
+    margin: 0;
+    color: var(--primaryBackground);
+    margin-bottom: 1em;
+    margin-left: 1.5em;
+  }
+  .mtgSection .title .mtgTitle {
+    margin: 0;
+    margin-top: 1em;
+    font-size: 3em;
+  }
+  .mtgSection .mtgss {
+    height: 900px;
+    width: auto;
+    margin: 0;
+    margin-top: 2em;
+  }
+  .mtgSection .mtgDescriptionBigScreen {
+    display: block;
+  }
+  .mtgSection .mtgDescriptionMobile {
+    display: none;
+  }
+}
+/*# sourceMappingURL=hobbies.css.map */

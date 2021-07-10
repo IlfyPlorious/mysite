@@ -242,6 +242,14 @@ nav {
     background: var(--secondaryBackground);
     padding: 0;
 
+    a{
+        color: var(--secondaryColor);
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1em;
+        align-self: center;
+    }
+
     .container{
         display: flex;
     }
@@ -253,17 +261,14 @@ nav {
         align-content: center;
         padding: 1em;
 
-        h1{
-            color: var(--secondaryColor);
-        }
-
         .listitem{
             display: flex;
             justify-content: center;
+            margin-top: .5em;
         }
 
         .listicon{
-            width: 35px;
+            width: 30px;
             height: auto;
             margin-left: 1em;
         }
@@ -373,6 +378,12 @@ nav {
         }
     }
 
+    .projects{
+        a{
+            font-size: 1.5em;
+        }
+    }
+
 }
 
 @media only screen and (min-width: 1350px){
@@ -425,10 +436,8 @@ nav {
     }
 
     .projects{
-        h1{
+        a{
             font-size: 2em;
-            overflow: hidden;
-            white-space: nowrap;
         }
     }
 

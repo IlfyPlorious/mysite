@@ -9,3 +9,4 @@ menuBtn.addEventListener('click', () => {
 menuBtnExit.addEventListener('click', () => {
     nav.classList.remove('menuBtn');
 })
+

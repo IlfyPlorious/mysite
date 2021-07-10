@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/hobbies.css">
 </head>
 <body>
     <div class="navbar">
         <div class="container">
-            <a href="index.html">Dragos<span>Sandu</span></a>
-
+            <a href="/html/index.html" class="logo">Dragos<span>Sandu</span></a>
+            <img id="mobileMenuIcon" class="mobileMenu" src="/assets/images/HamburgerMenu.svg" alt="Open Navigation">
             <nav>
-                <ul>
+                <img id="mobileXIcon" class="mobileMenuX" src="/assets/images/Xbutton.svg" alt="Close Navigation">
+
+                <ul class="primaryNav">
                     <li><a href="index.html">About Me</a></li>
                     <li class="current"><a href="hobbies.html">Hobbies</a></li>
                     <li><a href="vision.html">Vision</a></li>
@@ -25,5 +28,38 @@
             </nav>
         </div>
     </div>
+
+    <section class="mtgSection" id="mtgSection">
+        <div class="mtgCounter">
+            
+            <div class="mtgText">
+                <div class="title">
+                    <h1 class="mtgTitle">Magic Counter App</h1>
+                    <h6 class="mtgSubtitle">powered by flutter</h6>
+                </div>
+                <h4 class="mtgDescriptionBigScreen">description</h4>
+            </div>
+
+            <img src="/assets/images/mtgss.jpg" alt="Magic Counter App" class="mtgss">
+            
+            <h4 class="mtgDescriptionMobile">description</h4>
+
+        </div>
+    </section>
+
+    <section class="givealotterSection" id="givealotterSection">
+        <div class="givealotterContainer">
+
+        </div>
+    </section>
+
+    <section class="plantIrrigatorSection" id="plantIrrigator">
+
+    </section>
+
+    <script src="/javascript/source.js"></script>
+
 </body>
+
+
 </html>
