@@ -35,12 +35,37 @@
             <div class="mtgText">
                 <div class="title">
                     <h1 class="mtgTitle">Magic Counter App</h1>
-                    <h6 class="mtgSubtitle">powered by flutter</h6>
+                    <div class="subtitleContainer">
+                        <h6 class="mtgSubtitle">powered by flutter</h6>
+                        <img class="subtitleFluttericon" src="/assets/images/file_type_flutter_icon_130599.png" alt="flutter icon">
+                    </div>
                 </div>
                 <h4 class="mtgDescriptionBigScreen">description</h4>
             </div>
 
-            <img src="/assets/images/mtgss.jpg" alt="Magic Counter App" class="mtgss">
+            <div class="slideShowContainer">
+                <div class="mySlides1 fade">
+                    <img src="/assets/images/mtgss.jpg" style="width:400px">
+                </div>
+    
+                <div class="mySlides1 fade">
+                    <img src="/assets/images/mtgss.jpg" style="width:400px">
+                </div>
+                
+                <div class="mySlides1 fade">
+                    <img src="/assets/images/mtgss.jpg" style="width:400px">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1,0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1,0)">&#10095;</a>
+    
+                <div style="text-align:center">
+                    <span class="dot1" onclick="currentSlide(1,0)"></span>
+                    <span class="dot1" onclick="currentSlide(2,0)"></span>
+                    <span class="dot1" onclick="currentSlide(3,0)"></span>
+                </div>
+    
+            </div>
             
             <h4 class="mtgDescriptionMobile">description</h4>
 
@@ -48,9 +73,50 @@
     </section>
 
     <section class="givealotterSection" id="givealotterSection">
-        <div class="givealotterContainer">
+
+        <div class="giveALotterTitleContainer">
+            <h1 class="title">GiveA<span>Lotter</span></h1>
+            <div class="subtitleContainer">
+                <h3 class="subtitle">powered by java on android</h3>
+                <img class="subtitleImage" src="/assets/images/androidIcon.svg" alt="Android Icon">
+            </div>
+            <h3 class="description">description</h3>
+        </div>
+
+        <div class="slideShowContainer">
+            <div class="mySlides2 fade">
+                <img src="/assets/images/galss1.png" style="width:400px">
+            </div>
+
+            <div class="mySlides2 fade">
+                <img src="/assets/images/galss2.png" style="width:400px">
+            </div>
+            
+            <div class="mySlides2 fade">
+                <img src="/assets/images/galss3.png" style="width:400px">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+
+            <div style="text-align:center">
+                <span class="dot2" onclick="currentSlide(1, 1)"></span>
+                <span class="dot2" onclick="currentSlide(2, 1)"></span>
+                <span class="dot2" onclick="currentSlide(3, 1)"></span>
+              </div>
 
         </div>
+
+        <div class="giveALotterTitleContainerBigScreen">
+            <h1 class="title">GiveA<span>Lotter</span></h1>
+            <div class="subtitleContainer">
+                <h3 class="subtitle">powered by java on android</h3>
+                <img class="subtitleImage" src="/assets/images/androidIcon.svg" alt="Android Icon">
+            </div>
+            <h3 class="description">description</h3>
+        </div>
+
+
     </section>
 
     <section class="plantIrrigatorSection" id="plantIrrigator">
@@ -58,6 +124,7 @@
     </section>
 
     <script src="/javascript/source.js"></script>
+    <script src="/javascript/slideshow.js"></script>
 
 </body>
 

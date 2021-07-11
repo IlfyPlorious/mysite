@@ -128,19 +128,40 @@ nav li a:hover {
           justify-content: center;
 }
 
-.mtgSection .title .mtgSubtitle {
-  margin: 0;
-  color: var(--primaryBackground);
-  margin-bottom: 1em;
-  margin-left: 1.5em;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
 .mtgSection .title .mtgTitle {
   margin: 0;
   margin-top: 1em;
   font-size: 2em;
+}
+
+.mtgSection .title .subtitleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.mtgSection .title .subtitleContainer .mtgSubtitle {
+  margin: 0;
+  color: var(--primaryBackground);
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-left: .8em;
+  margin-right: .6em;
+}
+
+.mtgSection .title .subtitleContainer .subtitleFluttericon {
+  height: 20px;
+  width: auto;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.mtgSection .mtgText {
+  padding-bottom: 2em;
 }
 
 .mtgSection .mtgss {
@@ -161,9 +182,172 @@ nav li a:hover {
   text-align: left;
 }
 
-.givealotterSection .givealotterContainer {
+.slideShowContainer {
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+}
+
+.slideShowContainer .mySlides1 {
+  display: none;
+}
+
+.slideShowContainer .mySlides2 {
+  display: none;
+}
+
+.slideShowContainer .prev, .slideShowContainer .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -80px;
+  padding: 16px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  color: var(--primaryColor);
+  font-weight: bold;
+  font-size: 22px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: rgba(200, 200, 200, 0.5);
+}
+
+.slideShowContainer .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.slideShowContainer .prev {
+  left: 0;
+}
+
+.slideShowContainer .prev:hover, .slideShowContainer .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slideShowContainer .dot1 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.slideShowContainer .active, .slideShowContainer .dot1:hover {
+  background-color: #717171;
+}
+
+.slideShowContainer .dot2 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.slideShowContainer .active, .slideShowContainer .dot2:hover {
+  background-color: #717171;
+}
+
+.slideShowContainer .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.givealotterSection {
   background-color: var(--primaryBackground);
-  height: 1000px;
+}
+
+.givealotterSection .giveALotterTitleContainer {
+  text-align: center;
+  padding-bottom: 10px;
+  background-color: rgba(65, 29, 0, 0.5);
+}
+
+.givealotterSection .giveALotterTitleContainer .description {
+  display: none;
+}
+
+.givealotterSection .giveALotterTitleContainer .title {
+  padding: 1em;
+  padding-bottom: 0;
+  margin: 0;
+  font-size: 2em;
+  color: #895100;
+  margin-bottom: 5px;
+}
+
+.givealotterSection .giveALotterTitleContainer .title span {
+  color: #BFFFF1;
+}
+
+.givealotterSection .giveALotterTitleContainer .subtitleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+}
+
+.givealotterSection .giveALotterTitleContainer .subtitleContainer .subtitle {
+  margin: 0;
+  color: #BFFFF1;
+  margin-top: 2px;
+  font-size: .8em;
+}
+
+.givealotterSection .giveALotterTitleContainer .subtitleContainer .subtitleImage {
+  height: 20px;
+  width: auto;
+  margin-left: 10px;
+}
+
+.givealotterSection .giveALotterTitleContainerBigScreen .title {
+  display: none;
+}
+
+.givealotterSection .giveALotterTitleContainerBigScreen .subtitleContainer {
+  display: none;
 }
 
 .plantIrrigatorSection {
@@ -178,24 +362,20 @@ nav li a:hover {
   }
   .mtgSection .title {
     font-size: 1.5em;
+    padding-left: 2em;
   }
   .mtgSection .mtgDescriptionBigScreen {
     font-size: 1.5em;
+    padding-left: 2em;
   }
-  .mtgSection .mtgss {
-    height: 900px;
-    width: auto;
-    margin-left: 2em;
-    margin-right: 5em;
-    margin-top: .8em;
-    margin-bottom: .8em;
-  }
-  .mtgSection .mtgText {
-    margin-top: 10em;
+  .givealotterSection .giveALotterTitleContainerBigScreen {
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 1.2em;
   }
 }
 
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 1001px) {
   .mobileMenu, .mobileMenuX {
     display: none;
   }
@@ -259,6 +439,18 @@ nav li a:hover {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .mtgSection .mtgText {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .mtgSection .title {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -289,6 +481,72 @@ nav li a:hover {
   }
   .mtgSection .mtgDescriptionMobile {
     display: none;
+  }
+  .givealotterSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .givealotterSection .giveALotterTitleContainer {
+    display: none;
+  }
+  .givealotterSection .slideShowContainer {
+    padding-top: .5em;
+  }
+  .givealotterSection .giveALotterTitleContainerBigScreen {
+    text-align: center;
+    padding-bottom: 10px;
+    background-color: rgba(65, 29, 0, 0.5);
+    width: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .givealotterSection .giveALotterTitleContainerBigScreen .title {
+    padding: 1em;
+    padding-bottom: 0;
+    margin: 0;
+    font-size: 3em;
+    color: #895100;
+    margin-bottom: 5px;
+    display: block;
+  }
+  .givealotterSection .giveALotterTitleContainerBigScreen .title span {
+    color: #BFFFF1;
+  }
+  .givealotterSection .giveALotterTitleContainerBigScreen .subtitleContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+  }
+  .givealotterSection .giveALotterTitleContainerBigScreen .subtitleContainer .subtitle {
+    margin: 0;
+    color: #BFFFF1;
+    font-size: 1.5em;
+  }
+  .givealotterSection .giveALotterTitleContainerBigScreen .subtitleContainer .subtitleImage {
+    height: 30px;
+    width: auto;
+    margin-left: 10px;
   }
 }
 /*# sourceMappingURL=hobbies.css.map */

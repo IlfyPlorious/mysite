@@ -122,22 +122,38 @@ nav {
     }
 
     .title{
+        
         display: flex;
         justify-content: center;
         
-        .mtgSubtitle{
-            margin: 0;
-            color: var(--primaryBackground);
-            margin-bottom: 1em;
-            margin-left: 1.5em;
-            align-self: flex-end;
-        }
-
         .mtgTitle{
             margin: 0;
             margin-top: 1em;
             font-size: 2em;
         }
+
+        .subtitleContainer{
+            display: flex;
+            flex-direction: row;
+
+            .mtgSubtitle{
+                margin: 0;
+                color: var(--primaryBackground);
+                align-self: flex-end;
+                margin-left: .8em;
+                margin-right: .6em;
+            }    
+
+            .subtitleFluttericon{
+                height: 20px;
+                width: auto;
+                align-self: flex-end;
+            }
+        }
+    }
+
+    .mtgText{
+        padding-bottom: 2em;
     }
 
     .mtgss{
@@ -158,11 +174,152 @@ nav {
 
 }
 
-.givealotterSection{
-    .givealotterContainer{
-        background-color: var(--primaryBackground);
-        height: 1000px;
+.slideShowContainer{
+    max-width: 400px;
+    position: relative;
+    margin: auto;
+
+    .mySlides1 {
+        display: none;
     }
+    .mySlides2 {
+        display: none;
+    }
+
+    .prev, .next{
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -80px;
+        padding: 16px;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        color: var(--primaryColor);
+        font-weight: bold;
+        font-size: 22px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: rgba(200,200,200,.5);
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev{
+        left: 0;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    .dot1 {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, .dot1:hover {
+        background-color: #717171;
+    }
+
+    .dot2 {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, .dot2:hover {
+        background-color: #717171;
+    }
+
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {opacity: .8}
+        to {opacity: 1}
+    }
+
+    @keyframes fade {
+        from {opacity: .8}
+        to {opacity: 1}
+    }
+}
+
+.givealotterSection{
+    background-color: var(--primaryBackground);
+
+    .giveALotterTitleContainer{
+        .description{
+            display: none;
+        }
+
+        text-align: center;
+        padding-bottom: 10px;
+        background-color: rgba(65, 29, 0, 0.5);
+
+        .title{
+            padding: 1em;
+            padding-bottom: 0;
+            margin: 0;
+            font-size: 2em;
+            color: #895100;
+            margin-bottom: 5px;
+
+            span{
+                color: #BFFFF1;
+            }
+        }
+
+        .subtitleContainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 0;
+
+            .subtitle{
+                margin: 0;
+                color: #BFFFF1;
+                margin-top: 2px;
+                font-size: .8em;
+            }
+
+            .subtitleImage{
+                height: 20px;
+                width: auto;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .giveALotterTitleContainerBigScreen{
+        .title{
+            display: none;
+        }
+        .subtitleContainer{
+            display: none;
+        }
+    }
+
 }
 
 .plantIrrigatorSection{
@@ -177,28 +334,29 @@ nav {
 
         .title{
             font-size: 1.5em;
+            padding-left: 2em;
         }
 
         .mtgDescriptionBigScreen{
             font-size: 1.5em;
-        }
-    
-        .mtgss{
-            height: 900px;
-            width: auto;
-            margin-left: 2em;
-            margin-right: 5em;
-            margin-top: .8em;
-            margin-bottom: .8em;
+            padding-left: 2em;
         }
 
-        .mtgText{
-            margin-top: 10em;
+    }
+
+    .givealotterSection{
+
+        .giveALotterTitleContainerBigScreen{
+            padding-left: 100px;
+            padding-right: 100px;
+
+            font-size: 1.2em;
         }
+
     }
 }
 
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 1001px) {
 
     .mobileMenu, .mobileMenuX {
         display:none;
@@ -255,6 +413,12 @@ nav {
             flex-direction: row;
             justify-content: space-evenly;
         }
+
+        .mtgText{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     
         .title{
             display: flex;
@@ -290,6 +454,63 @@ nav {
             display: none;
         }
     
+    }
+
+    .givealotterSection{
+        display: flex;
+        flex-direction: row;
+
+        .giveALotterTitleContainer{
+           display: none;
+        }
+
+        .slideShowContainer{
+            padding-top: .5em;
+        }
+
+        .giveALotterTitleContainerBigScreen{
+
+            text-align: center;
+            padding-bottom: 10px;
+            background-color: rgba(65, 29, 0, 0.5);
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .title{
+                padding: 1em;
+                padding-bottom: 0;
+                margin: 0;
+                font-size: 3em;
+                color: #895100;
+                margin-bottom: 5px;
+                display: block;
+
+                span{
+                    color: #BFFFF1;
+                }
+            }
+
+            .subtitleContainer{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin: 0;
+
+                .subtitle{
+                    margin: 0;
+                    color: #BFFFF1;
+                    font-size: 1.5em;
+                }
+
+                .subtitleImage{
+                    height: 30px;
+                    width: auto;
+                    margin-left: 10px;
+                }
+            }
+        }
     }
 
 }
