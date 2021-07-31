@@ -115,6 +115,45 @@ nav li a:hover {
   color: var(--primaryBackground);
 }
 
+.mtgSection .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.mtgSection .description .gitlinkdesktop {
+  display: none;
+  color: var(--primaryColor);
+  text-decoration: underline;
+}
+
+.mtgSection .descriptionmobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.mtgSection .descriptionmobile .gitlinkmobile {
+  color: var(--primaryColor);
+  text-decoration: underline;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: 0.3em;
+}
+
+.mtgSection .descriptionmobile .mtgDescriptionMobile {
+  text-align: left;
+}
+
 .mtgSection .mtgCounter {
   margin: 0;
 }
@@ -176,10 +215,6 @@ nav li a:hover {
 
 .mtgSection .mtgDescriptionBigScreen {
   display: none;
-}
-
-.mtgSection .mtgDescriptionMobile {
-  text-align: left;
 }
 
 .slideShowContainer {
@@ -298,7 +333,7 @@ nav li a:hover {
   background-color: rgba(65, 29, 0, 0.5);
 }
 
-.givealotterSection .giveALotterTitleContainer .description {
+.givealotterSection .giveALotterTitleContainer .descandlink {
   display: none;
 }
 
@@ -350,6 +385,25 @@ nav li a:hover {
   display: none;
 }
 
+.givealotterSection .giveALotterTitleContainerBigScreen .descandlink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.givealotterSection .giveALotterTitleContainerBigScreen .descandlink .gitlinkmobile {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: .3em;
+  font-size: 1.3em;
+}
+
 .plantIrrigatorSection {
   background: var(--primaryColor);
   height: 1000px;
@@ -359,6 +413,9 @@ nav li a:hover {
   .mtgSection {
     padding: 1em;
     background: var(--secondaryColor);
+  }
+  .mtgSection .description .gitlinkdesktop {
+    font-size: 1.8em;
   }
   .mtgSection .title {
     font-size: 1.5em;
@@ -372,6 +429,9 @@ nav li a:hover {
     padding-left: 100px;
     padding-right: 100px;
     font-size: 1.2em;
+  }
+  .givealotterSection .giveALotterTitleContainerBigScreen .descandlink .gitlinkmobile {
+    font-size: 1.3em;
   }
 }
 
@@ -426,6 +486,16 @@ nav li a:hover {
     padding: 1em;
     background: var(--secondaryColor);
     text-align: left;
+  }
+  .mtgSection .gitlinkmobile {
+    display: none;
+  }
+  .mtgSection .description .gitlinkdesktop {
+    display: block;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-left: .3em;
   }
   .mtgSection .mtgCounter {
     display: -webkit-box;

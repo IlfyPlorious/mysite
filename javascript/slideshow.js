@@ -1,4 +1,4 @@
-var slideIndex = [1,1];
+var slideIndex = [0,0];
 /* Class the members of each slideshow group with different CSS classes */
 var slideId = ["mySlides1", "mySlides2"];
 var dotsId = ["dot1", "dot2"];

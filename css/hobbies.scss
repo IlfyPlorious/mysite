@@ -117,6 +117,37 @@ nav {
         
     }
 
+   
+    .description{
+
+        display: flex;
+        justify-content: start;
+
+        .gitlinkdesktop{
+            display: none;
+            color: var(--primaryColor);
+            text-decoration: underline;
+        }
+        
+    }
+
+    .descriptionmobile{
+        display: flex;
+        justify-content: start;
+        align-content: center;
+
+        .gitlinkmobile{
+            color: var(--primaryColor);
+            text-decoration: underline;
+            align-self: center;
+            padding-left: 0.3em;
+        }
+
+        .mtgDescriptionMobile{
+            text-align: left;
+        }
+    }
+
     .mtgCounter{
         margin: 0;
     }
@@ -168,9 +199,7 @@ nav {
         display: none;
     }
 
-    .mtgDescriptionMobile{
-        text-align: left;
-    }
+    
 
 }
 
@@ -269,7 +298,8 @@ nav {
     background-color: var(--primaryBackground);
 
     .giveALotterTitleContainer{
-        .description{
+        
+        .descandlink{
             display: none;
         }
 
@@ -318,6 +348,18 @@ nav {
         .subtitleContainer{
             display: none;
         }
+
+        .descandlink{
+            display: flex;
+            justify-content: start;
+            align-self: center;
+
+            .gitlinkmobile{
+                align-self: center;
+                padding-left: .3em;
+                font-size: 1.3em;
+            }
+        }
     }
 
 }
@@ -331,6 +373,12 @@ nav {
     .mtgSection{
         padding: 1em;
         background: var(--secondaryColor);
+
+        .description{
+            .gitlinkdesktop{
+                font-size: 1.8em;
+            }
+        }
 
         .title{
             font-size: 1.5em;
@@ -351,6 +399,12 @@ nav {
             padding-right: 100px;
 
             font-size: 1.2em;
+
+            .descandlink{
+                .gitlinkmobile{
+                    font-size: 1.3em;
+                }
+            }
         }
 
     }
@@ -407,7 +461,20 @@ nav {
         background: var(--secondaryColor);
         text-align: left;
 
-    
+        
+        .gitlinkmobile{
+            display: none;
+        }
+
+        .description{
+            
+            .gitlinkdesktop{
+                display: block;
+                align-self: center;
+                padding-left: .3em;
+            }
+        }
+
         .mtgCounter{
             display: flex;
             flex-direction: row;
