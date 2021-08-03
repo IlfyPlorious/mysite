@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --primaryColor: #ffaa22;
+    --secondaryColor: #2c2c2c;
+    --primaryBackground: #f2f2f2;
+    --secondaryBackground: #fdc752;
+    --thirdBackgroundColor: #6e4b00;
+    --thirdColor: #116800;
+    --linkColor: rgb(61, 28, 0);
+    --liSpacing: 2em;
+}
+
+body{
+    background: var(--primaryBackground);
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    background: white;
+    padding: 1em;
+    margin-bottom: 0;
+
+    nav{
+        display: none;
+    }
+
+    .logo {
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--secondaryColor);
+        font-size: 1.7em;
+
+        span{
+            color: var(--primaryColor);
+        }
+    }
+    
+    .container{
+        display: flex;
+        place-content: space-between;
+    }
+
+    .mobileMenu {
+        cursor: pointer;
+        height: auto;
+        width: 25px;
+    }
+}
+
+a {
+    color: var(--linkColor);
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.menuBtn{
+    display: block;
+}
+
+nav {
+    position: fixed;
+    z-index: 9999;
+    width: 66%;
+    right: 0;
+    top: 0;
+    background: var(--secondaryBackground);
+    height: 100vh;
+    padding: 1em;
+
+    .mobileMenuX{
+        height: auto;
+        width: 25px;
+        float: right;
+        cursor: pointer;
+        margin: .5em;
+    }
+
+    ul.primaryNav{
+        margin-top: 2.5em;
+    }
+
+    li {
+        a {
+            color:var(--linkColor);
+            text-decoration: none;
+            display: block;
+            padding: .5em;
+            font-size: 1.5em;
+            text-align: right;
+            
+            &:hover {
+                background: var(--thirdBackgroundColor);
+                border-radius: 5px;
+                color: var(--primaryBackground);
+            }
+        }
+    }
+}
+
+@media only screen and ( min-width: 980px ){
+    .mobileMenu, .mobileMenuX {
+        display:none;
+    }
+
+    .navbar.container{
+        display: grid;
+        grid-template-columns: 180px auto;
+        justify-content: unset;
+    }
+
+    .navbar nav{
+        display: flex;
+        justify-content: space-between;
+        background: none;
+        height: auto;
+        position: unset;
+        width: 100%;
+        padding: 0;
+
+        ul {
+            display: flex;
+        }
+
+        a {
+            color: var(--secondaryColor);
+            font-size: 1.5em;
+            padding: .1em 1em;
+            
+            &:hover{
+                background: none;
+                color: var(--secondaryColor);
+                font-weight: bold;
+            }
+        }
+
+        ul.primaryNav {
+            margin: 0;
+        }
+
+        li.current a {
+            font-weight: bold;
+        }
+    }
+}

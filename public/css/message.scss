@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+:root{
+    --primaryColor: #ffaa22;
+    --secondaryColor: #2c2c2c;
+    --primaryBackground: #f2f2f2;
+    --secondaryBackground: #fdc752;
+    --thirdBackgroundColor: #6e4b00;
+    --thirdColor: #116800;
+    --linkColor: rgb(61, 28, 0);
+    --liSpacing: 2em;
+}
+
+.formContainer{
+    position: relative;
+    left: 20%;
+    width: 60%;
+    height: 100vh;
+    background-color: #ffffff; 
+    text-align: center;
+
+    h2{
+        margin: 0;
+        padding: 1em;
+    }
+}
+
+.contactForm{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 600px;
+}
+
+input, textarea{
+    width: 100%;
+    margin-top: 2em;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.submit{
+    border: 1px solid var(--primaryColor) ;
+    border-radius: 8px;
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    background-color: var(--primaryBackground);
+    cursor: pointer;
+    height: 50px;
+
+    &:hover{
+        opacity: 0.6;
+    }
+}
